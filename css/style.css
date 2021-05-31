@@ -1,0 +1,43 @@
+/* @import "./_mixins"; */
+body {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  max-width: 480px;
+}
+
+header {
+  position: relative;
+  margin-top: 10px;
+}
+
+header .arrow_icon {
+  color: #353535;
+  position: absolute;
+  left: 0px;
+  padding: 22px;
+  display: none;
+}
+
+header .arrow_icon i {
+  font-size: 20px;
+  color: #353535;
+}
+/*# sourceMappingURL=style.css.map */
