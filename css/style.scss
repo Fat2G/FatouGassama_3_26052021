@@ -26,3 +26,31 @@ header{
     }
   }
 }
+.search_bar{
+  position: relative;
+  @extend %flex-center;
+  background-image: linear-gradient(to bottom,$noir_transp , $bg_gris_1 15%,$bg_gris_1);
+  padding: 10px 0px;
+  
+  i{
+    color: $coul_txt;
+    margin-right: 20px;
+    font-size: 18px;
+    position: absolute;
+    top: 17px;
+    left: 90px;
+    
+  }
+  input{
+    border: none;
+    padding: 10px 0px 10px 30px;
+    background-color: $bg_gris_1;
+  }
+  ::placeholder{
+    color: $coul_txt;
+    font-family: $font;
+    font-size: 18px;
+    font-weight: 500;
+    
+  }
+}
