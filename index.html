@@ -9,36 +9,65 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://kit.fontawesome.com/0c98f5c0d8.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
 </head>
 
 <!-- <i class="fas fa-store"></i>
-<i class="fas fa-mobile-alt"></i>
-<i class="fas fa-map-marker-alt"></i>
 <i class="far fa-heart"></i>
 <i class="fas fa-hands-helping"></i>
-<i class="fas fa-utensils"></i> -->
-
-<!-- Logo et titres Shrikhand  font-family: 'Shrikhand', cursive;
-texte Roboto  font-family: 'Roboto', sans-serif; -->
-
-<!-- primaire violet #9356DC
-secondaire rose #FF79DA
-tertiaire menthe #99E2D0 -->
-
+<i class="fas fa-utensils"></i>
+ -->  
 
 <body>
   <header>
-    <div>
-      <figure class="logo"> 
-        <img src="img/ohmyfood_logo.png" alt="logo ohmyfood">
-      </figure>
-    </div>
-    <div>
-
-    </div>
+    <a href="#index" class="arrow_icon">
+      <i class="fas fa-arrow-left"></i>
+    </a>
+    <figure class="logo_header">
+      <img src="img/ohmyfood_logo.svg" alt="logo ohmyfood">
+    </figure>
   </header>
+
+  <main>
+    <div class="search_bar">
+      <div>
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <div>
+        <input type="text" name="box" placeholder="Paris, Belleville">
+      </div>      
+    </div>
+
+    <section class="part_1">
+      <h1>
+        Réservez le menu qui vous convient
+      </h1>
+      <h2>
+        Découvrez des restaurants d'exception, sélectionnés par nos soins.
+      </h2> 
+      <div class="rest_button">
+        <input class="button" type="button" value="Explorer nos restaurants">    
+      </div>    
+    </section>
+
+    <section class="part_2">
+      <h1>Fonctionnement</h1>
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="#">
+              <div class="menu_num_circle">1</div>
+              <div class="menu_icon"><i class="fas fa-mobile-alt"></i></div>              
+              <h3>Choisissez un restaurant</h3>
+            </a>
+          </li>
+        </ul>
+        
+      </div>
+
+    </section>
+  </main>
+
   
 </body>
 </html>
