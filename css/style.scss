@@ -26,31 +26,27 @@ header{
   }
 }
 .search_bar{
-  position: relative;
   @extend %flex-center;
   background-image: linear-gradient(to bottom,$noir_transp, $bg_gris_1 15%,$bg_gris_1);
-  padding: 10px 0px;
+  padding: 15px 0px 10px 0px;
   
   i{
     color: $coul_txt;
-    margin-right: 20px;
-    font-size: 18px;
-    position: absolute;
-    top: 17px;
-    left: 90px;
-    
+    font-size: 18px; 
+    margin-right: 25px;
+    transform: translateY(-3px);
   }
   input{
     border: none;
-    padding: 10px 0px 10px 30px;
+    outline: none;
+    padding: 10px 0px;
     background-color: $bg_gris_1;
   }
   ::placeholder{
     color: $coul_txt;
     font-family: $font;
     font-size: 18px;
-    font-weight: 500;
-    
+    font-weight: 500;    
   }
 }
 .part_1{
@@ -98,7 +94,7 @@ header{
       position: relative;
       margin: 0px 5% 20px 5%;
       @extend %shadow;
-      
+
       &:hover{
         background-color: $coul_hover_1;
       }
