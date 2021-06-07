@@ -83,7 +83,7 @@ header{
 .button{
   position: relative;
   
-  p{
+  a{
     font-size: 16px;
     font-weight: 500;
     color: white;
@@ -93,23 +93,12 @@ header{
     background: linear-gradient(180deg, $coul_second,$coul_prim);
     border-radius: 30px;
     @extend %shadow;
-    
+    transition: .2s;
+    &:hover{
+      @extend %hover__shadow;
+      background: linear-gradient(180deg, #FF8DE0,#A36FE1);
     }
   }
-  .button__overlay{
-    position: absolute;
-    background-color: #FFF;
-    border-radius: 30px;
-    padding: 25px 110px;  
-    bottom: 0px;
-    left: 130px;
-    opacity: 0;
-    transition-duration: .2s;
-    cursor: pointer;
-    &:hover{
-      opacity: 0.2;
-      box-shadow: 0px 5px 8px 0px #000;
-    }
 }
 .main__part_2{
   width: 100%;
@@ -169,6 +158,92 @@ header{
 
 
 
+
+
+// aside
+aside{
+  margin-top: 70PX;
+}
+#restaurants{
+  background-color: $bg_gris_2;
+  @extend %grid;
+  padding: 10px 0px 60px 0px;
+    
+  h2{
+    @extend %article__titres;
+  }
+}
+.resto__article{
+  @extend %article__accueil;
+  @extend %shadow;
+  display: grid;
+  grid-template-rows: 70% 30%;
+  transition: .2s;
+  &:hover{
+    @extend %hover__shadow;
+  }
+}
+.resto__img{
+  border-radius: 20px 20px 0px 0px;
+  position: relative;
+  object-fit: cover;
+  overflow: hidden;
+  position: relative;
+
+  .resto__img_overlay{
+    background-color: rgb(119, 0, 0);
+    position: absolute;
+  }
+  
+  img{
+    @extend %resto__img;
+  }
+}
+.resto__img_spe{
+  img{
+    transform: translateY(-150px);
+  }
+}
+.label_new{
+  background-color: $coul_green_1;
+  height: 30px;
+  width: 80px;
+  color: $txt_green_1;
+  font-weight: 500;
+  line-height: 30px;
+  padding: 0px 5px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  @extend %shadow;
+}
+.resto__txt{
+  display: grid;
+  grid-template-columns: 80% 20%;
+  text-align: start;
+  margin: 15px 0px 0px 15px;
+  
+  h3{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  i{
+    font-size: 24px;
+    margin-left: 20px;
+    margin-top: 5px; 
+  }  
+}
+
+
+
+
+
+
+
+
+
+// Footer
 footer{
   text-align: start;
   background-color: $coul_txt;
@@ -176,6 +251,7 @@ footer{
   color: #FFF;
   h3{
     font-family: $font-spe;
+    font-size: 18px ;
     margin-bottom: 20px;
   }
   .footer__liste{
@@ -187,7 +263,6 @@ footer{
   }
   a{
     color: #FFF;
-    font-family: $font;
     i{
       font-size: 12px;
       margin-right: 10px;

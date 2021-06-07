@@ -23,6 +23,7 @@
 
 * a {
   text-decoration: none;
+  color: black;
 }
 
 header, .main__search_bar {
@@ -37,21 +38,46 @@ header, .main__search_bar {
           align-items: center;
 }
 
-.button p, .main__part_2 li a {
+.button a, .main__part_2 li a, .resto__article, .label_new {
   -webkit-box-shadow: 0px 5px 8px -2px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 5px 8px -2px rgba(0, 0, 0, 0.2);
 }
 
-.main__part_2 li a:hover {
+.button a:hover, .main__part_2 li a:hover, .resto__article:hover {
   -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.4);
 }
 
-.main__part_2 h2 {
+.resto__article {
+  background-color: #FFF;
+  border-radius: 20px;
+  height: 251px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 30%;
+      grid-template-rows: 1fr 30%;
+  margin: 0px 5% 18px 5%;
+}
+
+.main__part_2 h2, #restaurants h2 {
   text-align: start;
   margin: 50px 0px 25px 21px;
   font-size: 24px;
   font-weight: 700;
+}
+
+#restaurants {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.resto__img img {
+  width: 100%;
+  height: auto;
+  -webkit-transform: translateY(-44px);
+          transform: translateY(-44px);
 }
 
 body {
@@ -150,7 +176,7 @@ header .header__logo img {
   position: relative;
 }
 
-.button p {
+.button a {
   font-size: 16px;
   font-weight: 500;
   color: white;
@@ -162,25 +188,13 @@ header .header__logo img {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(180deg, #FF79DA, #9356DC);
   border-radius: 30px;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
-.button__overlay {
-  position: absolute;
-  background-color: #FFF;
-  border-radius: 30px;
-  padding: 25px 110px;
-  bottom: 0px;
-  left: 130px;
-  opacity: 0;
-  -webkit-transition-duration: .2s;
-          transition-duration: .2s;
-  cursor: pointer;
-}
-
-.button__overlay:hover {
-  opacity: 0.2;
-  -webkit-box-shadow: 0px 5px 8px 0px #000;
-          box-shadow: 0px 5px 8px 0px #000;
+.button a:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF8DE0), to(#A36FE1));
+  background: linear-gradient(180deg, #FF8DE0, #A36FE1);
 }
 
 .main__part_2 {
@@ -240,6 +254,77 @@ header .header__logo img {
   margin: 7px 0px 0px 10px;
 }
 
+aside {
+  margin-top: 70PX;
+}
+
+#restaurants {
+  background-color: #F6F6F6;
+  padding: 10px 0px 60px 0px;
+}
+
+.resto__article {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 70% 30%;
+      grid-template-rows: 70% 30%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.resto__img {
+  border-radius: 20px 20px 0px 0px;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.resto__img .resto__img_overlay {
+  background-color: #770000;
+  position: absolute;
+}
+
+.resto__img_spe img {
+  -webkit-transform: translateY(-150px);
+          transform: translateY(-150px);
+}
+
+.label_new {
+  background-color: #99E2D0;
+  height: 30px;
+  width: 80px;
+  color: #008766;
+  font-weight: 500;
+  line-height: 30px;
+  padding: 0px 5px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.resto__txt {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% 20%;
+      grid-template-columns: 80% 20%;
+  text-align: start;
+  margin: 15px 0px 0px 15px;
+}
+
+.resto__txt h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.resto__txt i {
+  font-size: 24px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
 footer {
   text-align: start;
   background-color: #353535;
@@ -249,6 +334,7 @@ footer {
 
 footer h3 {
   font-family: "Shrikhand", cursive;
+  font-size: 18px;
   margin-bottom: 20px;
 }
 
@@ -263,7 +349,6 @@ footer li {
 
 footer a {
   color: #FFF;
-  font-family: "Roboto", sans-serif;
 }
 
 footer a i {
