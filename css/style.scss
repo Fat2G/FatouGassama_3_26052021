@@ -2,17 +2,25 @@
 @import "scss/_placeholders";
 @import "scss/_variables";
 
-body{
+*{
   @extend %reset;
-  font-family: $font;
-  max-width: 480px;
+  
 }
+body{
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 300;
+  max-width: 480px;
+  text-align: center;
+}
+
+// header
 header{
   position: relative;
-  @extend %flex-center;
-  margin-top: 10px;
-  
-  .arrow_icon{
+  @extend %flex_center;
+  margin: 23px 0px 12px 0px;
+
+  .header__arrow_icon{
     color: $coul_txt;
     position: absolute;
     left: 0px;
@@ -24,66 +32,93 @@ header{
       color: $coul_txt;
     }
   }
+  .header__logo{
+    img{
+      width: 90%;
+    }
+  }
 }
-.search_bar{
-  @extend %flex-center;
+// main
+.main__search_bar{
+  @extend %flex_center;
   background-image: linear-gradient(to bottom,$noir_transp, $bg_gris_1 15%,$bg_gris_1);
   padding: 15px 0px 10px 0px;
   
   i{
     color: $coul_txt;
     font-size: 18px; 
-    margin-right: 25px;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
+    padding-left: 45px;
+
   }
   input{
+    justify-items: start;
     border: none;
     outline: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: $coul_txt;
     padding: 10px 0px;
+    padding-left: 15px;
     background-color: $bg_gris_1;
   }
   ::placeholder{
     color: $coul_txt;
-    font-family: $font;
-    font-size: 18px;
-    font-weight: 500;    
+    font-family: inherit;    
   }
 }
-.part_1{
+.main__part_1{
   background-color: $bg_gris_2;
+  padding: 20px 0px 80px 0px;
   h1{
-    margin: 0px;
-    padding-top: 45px;
-    font-size: 22px;
+    padding-top: 28px;
+    font-size: 24px;
+    font-weight: 700;
   }
   h2{
     font-size: 18px;
-    font-weight: 300;
+    margin: 22px 0px 45px 0px;
   }
 }
 .button{
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
-  padding: 15px 22px;
-  border: none;
-  background: linear-gradient(180deg, $coul_second,$coul_prim);
-  border-radius: 30px;
-  @extend %shadow;
-  margin: 20px 0px 57px 0px;
+  position: relative;
+  p{
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    width: fit-content;
+    margin: auto;
+    padding: 15px 22px;
+    background: linear-gradient(180deg, $coul_second,$coul_prim);
+    border-radius: 30px;
+    @extend %shadow;
+    }
+  }
+  .button__overlay{
+    position: absolute;
+    background-color: #FFF;
+    border-radius: 30px;
+    padding: 25px 110px;  
+    bottom: 0px;
+    left: 130px;
+    opacity: 0;
+    transition-duration: .2s;
+    cursor: pointer;
+    &:hover{
+      opacity: 0.2;
+      box-shadow: 0px 5px 8px 0px #000;
+    }
 }
-.part_2{
+.main__part_2{
   width: 100%;
-  
-  h1{
-    text-align: start;
-    margin: 50px 0px 30px 21px;
+  h2{
+    @extend %titres_accueil;
+    
   }
   ul{
     padding-left: 10px;
   }
   li{
-    list-style: none;
     a{
       display: grid;
       grid-template-columns: 73px 1fr;
@@ -94,25 +129,23 @@ header{
       position: relative;
       margin: 0px 5% 20px 5%;
       @extend %shadow;
-
-      &:hover{
+      &:hover {
         background-color: $coul_hover_1;
+        @extend %hover__shadow;
       }
-      &:hover > .menu_icon{
+      &:hover .menu__icon{
         color: $coul_prim;
       }
     }
     h3{
       color: #000;
       font-weight: 500;
-      font-size: 18px;
       text-align: start;
-      padding: 10px 0px;
+      padding: 30px 0px 24px 0px;
     }
   }
-  
 }
-.menu_num_circle{
+.menu__num_circle{
   color: #FFF;
   font-weight: 400;
   font-size: 14px;
@@ -123,9 +156,11 @@ header{
   line-height: 24px;
   position: absolute;
   left: -12px;
+  bottom: 23px;
 }
-.menu_icon{
+.menu__icon{
   color: $coul_icon;
-  font-size: 20px;
-  margin-left: 10px;
+  font-size: 18px;
+  margin: 7px 0px 0px 10px;
 }
+
