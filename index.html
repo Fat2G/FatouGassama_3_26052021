@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="Ohmyfood" content="Site de ??????">
+  <meta name="Ohmyfood" content="Site de restauration">
   <title>Ohmyfood</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://kit.fontawesome.com/0c98f5c0d8.js" crossorigin="anonymous"></script>
@@ -12,24 +12,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
 </head>
 
-<!-- 
-<i class="far fa-heart"></i>
-<i class="fas fa-hands-helping"></i>
-<i class="fas fa-utensils"></i>
- -->  
-
 <body>
+  
   <header>
-    <a href="#index" class="arrow_icon">
+    <a href="#index" class="header__arrow_icon">
       <i class="fas fa-arrow-left"></i>
     </a>
-    <figure class="logo_header">
+    <figure class="header__logo">
       <img src="img/ohmyfood_logo.svg" alt="logo ohmyfood">
     </figure>
   </header>
 
   <main>
-    <div class="search_bar">
+    <div class="main__search_bar">
       <div>
         <i class="fas fa-map-marker-alt"></i>
       </div>
@@ -37,51 +32,84 @@
         <input type="text" name="box" placeholder="Paris, Belleville">
       </div>      
     </div>
-
-    <section class="part_1">
+    <!-- Partie 1 textes et bouton -->
+    <section class="main__part_1">
       <h1>
         Réservez le menu qui <br>vous convient
       </h1>
       <h2>
         Découvrez des restaurants d'exception, <br>sélectionnés par nos soins.
-      </h2> 
-      <a href="#" class="rest_button">
-        <input class="button" type="button" value="Explorer nos restaurants">  
-      </a>
+      </h2>
+      <div class="button">
+        <a href="#restaurants" class="button__overlay"></a>
+        <p>
+          Explorer nos restaurants
+        </p>
+      </div>
+      
     </section>
-
-    <section class="part_2">
-      <h1>Fonctionnement</h1>
+    <!-- Partie 2 fonctionnement et listes avec hover -->
+    <section class="main__part_2">
+      <h2>Fonctionnement</h2>
       <div class="menu">
         <ul>
           <li>
             <a href="#">
-              <div class="menu_num_circle">1</div>
-              <div class="menu_icon"><i class="fas fa-mobile-alt"></i></div>              
+              <div class="menu__num_circle">1</div>
+              <div class="menu__icon"><i class="fas fa-mobile-alt"></i></div>              
               <h3>Choisissez un restaurant</h3>
             </a>
           </li>
           <li>
             <a href="#">
-              <div class="menu_num_circle">2</div>
-              <div class="menu_icon"><i class="fas fa-list-ul"></i></i></div>              
+              <div class="menu__num_circle">2</div>
+              <div class="menu__icon"><i class="fas fa-list-ul"></i></i></div>              
               <h3>Composez votre menu</h3>
             </a>
           </li>
           <li>
             <a href="#">
-              <div class="menu_num_circle">3</div>
-              <div class="menu_icon"><i class="fas fa-store"></i></div>              
+              <div class="menu__num_circle">3</div>
+              <div class="menu__icon"><i class="fas fa-store"></i></div>              
               <h3>Dégustez au restaurant</h3>
             </a>
           </li>
         </ul>
-        
       </div>
-
     </section>
   </main>
 
+
+  <footer>
+    <div class="footer__liste">
+      <h3>ohmyfood</h3>
+      <ul>
+        <li>
+          <a href="#">
+            <i class="fas fa-utensils"></i>
+            Proposer un restaurant
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-hands-helping"></i>
+            Devenir partenaire
+          </a>
+        </li>
+        <li>
+          <a href="#">Mentions légales</a>
+        </li>
+        <li>
+          <a href="mailto:contact@ohmyfood.fr">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+
+  
+  
+  
   
 </body>
 </html>

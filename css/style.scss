@@ -82,6 +82,7 @@ header{
 }
 .button{
   position: relative;
+  
   p{
     font-size: 16px;
     font-weight: 500;
@@ -92,6 +93,7 @@ header{
     background: linear-gradient(180deg, $coul_second,$coul_prim);
     border-radius: 30px;
     @extend %shadow;
+    
     }
   }
   .button__overlay{
@@ -112,7 +114,7 @@ header{
 .main__part_2{
   width: 100%;
   h2{
-    @extend %titres_accueil;
+    @extend %article__titres;
     
   }
   ul{
@@ -123,7 +125,6 @@ header{
       display: grid;
       grid-template-columns: 73px 1fr;
       align-items: center;
-      text-decoration: none;
       background-color: $bg_gris_2;
       border-radius: 20px;
       position: relative;
@@ -164,3 +165,36 @@ header{
   margin: 7px 0px 0px 10px;
 }
 
+
+
+
+
+footer{
+  text-align: start;
+  background-color: $coul_txt;
+  bottom: 0;
+  color: #FFF;
+  h3{
+    font-family: $font-spe;
+    margin-bottom: 20px;
+  }
+  .footer__liste{
+    margin: 0px 5%;
+    padding: 25px 0px;
+  }
+  li{
+    margin-bottom: 10px;
+  }
+  a{
+    color: #FFF;
+    font-family: $font;
+    i{
+      font-size: 12px;
+      margin-right: 10px;
+    }
+  }
+  .fa-hands-helping{
+    font-size: 10px;
+    margin-right: 7px;
+  }
+}
