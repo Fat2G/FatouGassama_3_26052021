@@ -7,6 +7,7 @@
   <meta name="Ohmyfood" content="Site de restauration">
   <title>Ohmyfood</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <link rel="icon" type="img/png" href="img/favicon.jpg">
   <script src="https://kit.fontawesome.com/0c98f5c0d8.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,10 +16,10 @@
 
 <body>
   <!-- loader -->
-  <div class="loader">
+  <!-- <div class="loader">
     <div id="load_circle_1"></div>
     <div id="load_circle_2"><span>o</span></div>
-  </div>
+  </div> -->
   <!-- header logo + fleche  -->
   <header>
     <a href="#index" class="header__arrow_icon">
@@ -38,127 +39,132 @@
         <input type="text" name="box" placeholder="Paris, Belleville">
       </div>      
     </div>
-    <!-- Partie 1 textes et bouton -->
-    <section class="main__part_1">
-      <h1>
-        Réservez le menu qui <br>vous convient
-      </h1>
-      <h2>
-        Découvrez des restaurants d'exception, <br>sélectionnés par nos soins.
-      </h2>
-      <div class="button">
-        <a href="#restaurants">Explorer nos restaurants</a>
-      </div>
-      
-    </section>
-    <!-- Partie 2 fonctionnement et listes avec hover -->
-    <section class="main__part_2">
-      <h2>Fonctionnement</h2>
-      <div class="menu">
-        <ul>
-          <li>
-            <a href="#">
-              <div class="menu__num_circle">1</div>
-              <div class="menu__icon"><i class="fas fa-mobile-alt"></i></div>              
-              <h3>Choisissez un restaurant</h3>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="menu__num_circle">2</div>
-              <div class="menu__icon"><i class="fas fa-list-ul"></i></i></div>              
-              <h3>Composez votre menu</h3>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="menu__num_circle">3</div>
-              <div class="menu__icon"><i class="fas fa-store"></i></div>              
-              <h3>Dégustez au restaurant</h3>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <div class="main__sections">
+      <!-- Partie 1 textes et bouton -->
+      <section class="main__part_1">
+        <h1>
+          Réservez le menu qui <br>vous convient
+        </h1>
+        <h2>
+          Découvrez des restaurants d'exception, <br>sélectionnés par nos soins.
+        </h2>
+        <div class="button">
+          <a href="#restaurants">Explorer nos restaurants</a>
+        </div>
+        
+      </section>
+      <!-- Partie 2 fonctionnement et listes avec hover -->
+      <section class="main__part_2">
+        <h2>Fonctionnement</h2>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#">
+                <div class="menu__num_circle">1</div>
+                <div class="menu__icon"><i class="fas fa-mobile-alt"></i></div>              
+                <h3>Choisissez un restaurant</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="menu__num_circle">2</div>
+                <div class="menu__icon"><i class="fas fa-list-ul"></i></div>              
+                <h3>Composez votre menu</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="menu__num_circle">3</div>
+                <div class="menu__icon"><i class="fas fa-store"></i></div>              
+                <h3>Dégustez au restaurant</h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
   </main>
   <!-- aside avec liste des restaurants -->
   <aside>
     <section id="restaurants">
       <h2>Restaurants</h2>
-      <!-- article 1 -->
-      <article>
-        <a href="#" class="resto__article">
-          <div class="resto__img">
-            <img src="img/restaurants/mini/img_A.jpg" alt="La palette du goût">
-            <span class="label_new">Nouveau</span>
-          </div>
-          <div class="resto__txt">
-            <div>
-              <h3>La palette du goût</h3>
-              <h4>Ménilmontant</h4>
-            </div> 
-            <div class="hearts">
-              <i class="far fa-heart"></i>
-              <i class="fas fa-heart heart__hover"></i>
-            </div>         
-          </div>
-        </a>        
-      </article>
-      <!-- article 2 -->
-      <article>
-        <a href="#" class="resto__article">
-          <div class="resto__img resto__img_spe">
-            <img src="img/restaurants/mini/img_B.jpg" alt="La note enchantée">
-            <span class="label_new">Nouveau</span>
-          </div>
-          <div class="resto__txt">
-            <div>
-              <h3>La note enchantée</h3>
-              <h4>Charonne</h4>
-            </div> 
-            <div class="hearts">
-              <i class="far fa-heart"></i>
-              <i class="fas fa-heart heart__hover"></i>
-            </div>         
-          </div>
-        </a>        
-      </article>
-      <!-- article 3 -->
-      <article>
-        <a href="#" class="resto__article">
-          <div class="resto__img">
-            <img src="img/restaurants/mini/img_C.jpg" alt="À la française">
-          </div>
-          <div class="resto__txt">
-            <div>
-              <h3>À la française</h3>
-              <h4>Cité Rouge</h4>
-            </div> 
-            <div class="hearts">
-              <i class="far fa-heart"></i>
-              <i class="fas fa-heart heart__hover"></i>
-            </div>         
-          </div>
-        </a>        
-      </article>
-      <!-- article 4 -->
-      <article>
-        <a href="#" class="resto__article">
-          <div class="resto__img">
-            <img src="img/restaurants/mini/img_D.jpg" alt="La palette du goût">
-          </div>
-          <div class="resto__txt">
-            <div>
-              <h3>Le délice des sens</h3>
-              <h4>Folie-Méricourt</h4>
-            </div> 
-            <div class="hearts">
-              <i class="far fa-heart"></i>
-              <i class="fas fa-heart heart__hover"></i>
-            </div>         
-          </div>
-        </a>        
-      </article>
+      <div class="article_grid">
+        <!-- article 1 -->
+        <article>
+          <a href="#" class="resto__article">
+            <div class="resto__img">
+              <img src="img/restaurants/mini/img_A.jpg" alt="La palette du goût">
+              <span class="label_new">Nouveau</span>
+            </div>
+            <div class="resto__txt">
+              <div>
+                <h3>La palette du goût</h3>
+                <h4>Ménilmontant</h4>
+              </div> 
+              <div class="hearts">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart heart__hover"></i>
+              </div>         
+            </div>
+          </a>        
+        </article>
+        <!-- article 2 -->
+        <article>
+          <a href="#" class="resto__article">
+            <div class="resto__img resto__img_spe">
+              <img src="img/restaurants/mini/img_B.jpg" alt="La note enchantée">
+              <span class="label_new">Nouveau</span>
+            </div>
+            <div class="resto__txt">
+              <div>
+                <h3>La note enchantée</h3>
+                <h4>Charonne</h4>
+              </div> 
+              <div class="hearts">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart heart__hover"></i>
+              </div>         
+            </div>
+          </a>        
+        </article>
+        <!-- article 3 -->
+        <article>
+          <a href="#" class="resto__article">
+            <div class="resto__img">
+              <img src="img/restaurants/mini/img_C.jpg" alt="À la française">
+            </div>
+            <div class="resto__txt">
+              <div>
+                <h3>À la française</h3>
+                <h4>Cité Rouge</h4>
+              </div> 
+              <div class="hearts">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart heart__hover"></i>
+              </div>         
+            </div>
+          </a>        
+        </article>
+        <!-- article 4 -->
+        <article>
+          <a href="#" class="resto__article">
+            <div class="resto__img">
+              <img src="img/restaurants/mini/img_D.jpg" alt="La palette du goût">
+            </div>
+            <div class="resto__txt">
+              <div>
+                <h3>Le délice des sens</h3>
+                <h4>Folie-Méricourt</h4>
+              </div> 
+              <div class="hearts">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart heart__hover"></i>
+              </div>         
+            </div>
+          </a>        
+        </article>
+      </div>
   
     </section>
   </aside>
@@ -188,11 +194,5 @@
       </ul>
     </div>
   </footer>
-
-
-  
-  
-  
-  
 </body>
 </html>
