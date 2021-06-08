@@ -16,20 +16,21 @@ body{
 .loader{
   background: linear-gradient(45deg, $coul_ter, $coul_second);
   position: absolute;
-  // inset: 0px;
-  top: 0; bottom: 0; left: 0; right: 0;
   height: 100%;
   width: 100%;
+  top: 0px; bottom: 0px; left: 0px; right: 0px;
   z-index: 100;
   animation: .9s opacite_loader 2s ease-out forwards ;
 }
 /* animation opacite loader */
 @keyframes opacite_loader{
   0%{
-    opacity: 1;
+    // opacity: 1;
+    transform: translateX(0px);
   }
   100%{
-    opacity: 0;
+    // opacity: 0;
+    transform: translateX(-1400px);
   }
 }
 #load_circle_1{
@@ -67,19 +68,19 @@ body{
 }
 @keyframes scale{
   0%{
-    transform: scale(100%);
+    transform: scale(1);
   }
   25%{
-    transform: scale(110%);
+    transform: scale(1.1);
   }
   50%{
-    transform: scale(100%);
+    transform: scale(1);
   }
   75%{
-    transform: scale(110%);
+    transform: scale(1.1);
   }
   100%{
-    transform: scale(100%);
+    transform: scale(1);
   }
 }
 
@@ -107,6 +108,7 @@ header{
   }
 }
 // main
+/* barre de recherche */
 .main__search_bar{
   @extend %flex_center;
   background-image: linear-gradient(to bottom,$noir_transp, $bg_gris_1 15%,$bg_gris_1);
@@ -133,11 +135,12 @@ header{
     font-family: inherit;    
   }
 }
+/* partie Reservez... */
 .main__part_1{
   background-color: $bg_gris_2;
   padding: 20px 0px 80px 0px;
   h1{
-    padding-top: 28px;
+    padding-top: 30px;
     font-size: 24px;
     font-weight: 700;
   }
@@ -189,7 +192,8 @@ header{
       &:hover {
         background-color: $coul_hover_1;
         @extend %hover__shadow;
-      }/* changement couleur icon */
+      }
+      /* changement couleur icon */
       &:hover .menu__icon{
         color: $coul_prim;
       }
@@ -226,7 +230,6 @@ aside{
 }
 #restaurants{
   background-color: $bg_gris_2;
-  @extend %grid;
   padding: 10px 0px 60px 0px;
   h2{
     @extend %article__titres;
@@ -321,6 +324,9 @@ footer{
   .footer__liste{
     margin: 0px 5%;
     padding: 25px 0px;
+    ul{
+      @extend %grid;
+    }
   }
   li{
     margin-bottom: 10px;
