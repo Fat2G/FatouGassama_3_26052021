@@ -4,7 +4,6 @@
 
 *{
   @extend %reset;
-  
 }
 body{
   font-family: $font;
@@ -13,20 +12,18 @@ body{
   max-width: 480px;
   text-align: center;
 }
-
 // header
 header{
   position: relative;
   @extend %flex_center;
   margin: 23px 0px 12px 0px;
-
+  /* fleche non visible dans page accueil */
   .header__arrow_icon{
     color: $coul_txt;
     position: absolute;
     left: 0px;
     padding: 22px;
     display: none;
-    
     i{
       font-size: 20px;
       color: $coul_txt;
@@ -43,13 +40,11 @@ header{
   @extend %flex_center;
   background-image: linear-gradient(to bottom,$noir_transp, $bg_gris_1 15%,$bg_gris_1);
   padding: 15px 0px 10px 0px;
-  
   i{
     color: $coul_txt;
     font-size: 18px; 
     transform: translateY(-2px);
     padding-left: 45px;
-
   }
   input{
     justify-items: start;
@@ -82,7 +77,6 @@ header{
 }
 .button{
   position: relative;
-  
   a{
     font-size: 16px;
     font-weight: 500;
@@ -93,18 +87,18 @@ header{
     background: linear-gradient(180deg, $coul_second,$coul_prim);
     border-radius: 30px;
     @extend %shadow;
-    transition: .2s;
+    transition: all .25s ease-in-out;
     &:hover{
       @extend %hover__shadow;
       background: linear-gradient(180deg, #FF8DE0,#A36FE1);
     }
   }
 }
+/* partie fonctionnement */
 .main__part_2{
   width: 100%;
   h2{
     @extend %article__titres;
-    
   }
   ul{
     padding-left: 10px;
@@ -119,10 +113,12 @@ header{
       position: relative;
       margin: 0px 5% 20px 5%;
       @extend %shadow;
+      transition: all .25s ease-in-out;
+      /* hover liste fonctionnement shadow + couleur */
       &:hover {
         background-color: $coul_hover_1;
         @extend %hover__shadow;
-      }
+      }*/* changement couleur icon */
       &:hover .menu__icon{
         color: $coul_prim;
       }
@@ -153,13 +149,6 @@ header{
   font-size: 18px;
   margin: 7px 0px 0px 10px;
 }
-
-
-
-
-
-
-
 // aside
 aside{
   margin-top: 70PX;
@@ -168,7 +157,6 @@ aside{
   background-color: $bg_gris_2;
   @extend %grid;
   padding: 10px 0px 60px 0px;
-    
   h2{
     @extend %article__titres;
   }
@@ -178,22 +166,13 @@ aside{
   @extend %shadow;
   display: grid;
   grid-template-rows: 70% 30%;
-  transition: .2s;
-  &:hover{
-    @extend %hover__shadow;
-  }
 }
 .resto__img{
   border-radius: 20px 20px 0px 0px;
-  position: relative;
-  object-fit: cover;
   overflow: hidden;
   position: relative;
-
-  .resto__img_overlay{
-    background-color: rgb(119, 0, 0);
-    position: absolute;
-  }
+  object-fit: none;
+  object-position: 20px 30% ;
   
   img{
     @extend %resto__img;
@@ -201,9 +180,10 @@ aside{
 }
 .resto__img_spe{
   img{
-    transform: translateY(-150px);
+    top: -100px;
   }
 }
+/* carre vert "Nouveau" */
 .label_new{
   background-color: $coul_green_1;
   height: 30px;
@@ -228,21 +208,34 @@ aside{
     font-weight: 700;
     margin-bottom: 5px;
   }
-  i{
-    font-size: 24px;
-    margin-left: 20px;
-    margin-top: 5px; 
-  }  
 }
-
-
-
-
-
-
-
-
-
+.hearts{
+  position: relative;
+  i{
+    font-size: 26px;
+    position: absolute;
+    top: 7px;
+    right: 39px;
+  }
+  .heart__hover{    
+    background: linear-gradient(10deg, #FF8DE0,#A36FE1 70%);    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    &:hover{
+      animation: opacity_heart_gradient .5s ease-in forwards;
+    }
+  }
+}
+/* animation hover coeur degrade */
+@keyframes opacity_heart_gradient{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 // Footer
 footer{
   text-align: start;

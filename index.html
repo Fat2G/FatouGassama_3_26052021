@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  
+  <!-- header logo + fleche  -->
   <header>
     <a href="#index" class="header__arrow_icon">
       <i class="fas fa-arrow-left"></i>
@@ -22,7 +22,7 @@
       <img src="img/ohmyfood_logo.svg" alt="logo ohmyfood">
     </figure>
   </header>
-
+<!-- main -->
   <main>
     <div class="main__search_bar">
       <div>
@@ -79,30 +79,84 @@
   <aside>
     <section id="restaurants">
       <h2>Restaurants</h2>
+      <!-- article 1 -->
       <article>
-        <a href="" class="resto__article">
+        <a href="#" class="resto__article">
           <div class="resto__img">
-            <div class="resto__img_overlay"></div>
             <img src="img/restaurants/mini/img_A.jpg" alt="La palette du goût">
-            <p class="label_new">Nouveau</p>
+            <span class="label_new">Nouveau</span>
           </div>
           <div class="resto__txt">
             <div>
               <h3>La palette du goût</h3>
               <h4>Ménilmontant</h4>
             </div> 
-            <div>
-              <i class="far fa-heart hover-heart" aria-hidden="true"><div class="coeur_rempli"></div></i>
+            <div class="hearts">
+              <i class="far fa-heart"></i>
+              <i class="fas fa-heart heart__hover"></i>
             </div>         
           </div>
-        </a>
-        
+        </a>        
+      </article>
+      <!-- article 2 -->
+      <article>
+        <a href="#" class="resto__article">
+          <div class="resto__img resto__img_spe">
+            <img src="img/restaurants/mini/img_B.jpg" alt="La note enchantée">
+            <span class="label_new">Nouveau</span>
+          </div>
+          <div class="resto__txt">
+            <div>
+              <h3>La note enchantée</h3>
+              <h4>Charonne</h4>
+            </div> 
+            <div class="hearts">
+              <i class="far fa-heart"></i>
+              <i class="fas fa-heart heart__hover"></i>
+            </div>         
+          </div>
+        </a>        
+      </article>
+      <!-- article 3 -->
+      <article>
+        <a href="#" class="resto__article">
+          <div class="resto__img">
+            <img src="img/restaurants/mini/img_C.jpg" alt="À la française">
+          </div>
+          <div class="resto__txt">
+            <div>
+              <h3>À la française</h3>
+              <h4>Cité Rouge</h4>
+            </div> 
+            <div class="hearts">
+              <i class="far fa-heart"></i>
+              <i class="fas fa-heart heart__hover"></i>
+            </div>         
+          </div>
+        </a>        
+      </article>
+      <!-- article 4 -->
+      <article>
+        <a href="#" class="resto__article">
+          <div class="resto__img">
+            <img src="img/restaurants/mini/img_D.jpg" alt="La palette du goût">
+          </div>
+          <div class="resto__txt">
+            <div>
+              <h3>Le délice des sens</h3>
+              <h4>Folie-Méricourt</h4>
+            </div> 
+            <div class="hearts">
+              <i class="far fa-heart"></i>
+              <i class="fas fa-heart heart__hover"></i>
+            </div>         
+          </div>
+        </a>        
       </article>
   
     </section>
   </aside>
-
-
+  <!-- footer present sur chaque page -->
   <footer>
     <div class="footer__liste">
       <h3>ohmyfood</h3>

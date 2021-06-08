@@ -43,7 +43,7 @@ header, .main__search_bar {
           box-shadow: 0px 5px 8px -2px rgba(0, 0, 0, 0.2);
 }
 
-.button a:hover, .main__part_2 li a:hover, .resto__article:hover {
+.button a:hover, .main__part_2 li a:hover {
   -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.4);
 }
@@ -52,6 +52,7 @@ header, .main__search_bar {
   background-color: #FFF;
   border-radius: 20px;
   height: 251px;
+  max-width: 335px;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr 30%;
@@ -76,8 +77,9 @@ header, .main__search_bar {
 .resto__img img {
   width: 100%;
   height: auto;
-  -webkit-transform: translateY(-44px);
-          transform: translateY(-44px);
+  position: absolute;
+  left: 0px;
+  top: -50px;
 }
 
 body {
@@ -91,6 +93,7 @@ body {
 header {
   position: relative;
   margin: 23px 0px 12px 0px;
+  /* fleche non visible dans page accueil */
 }
 
 header .header__arrow_icon {
@@ -188,8 +191,8 @@ header .header__logo img {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(180deg, #FF79DA, #9356DC);
   border-radius: 30px;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
 }
 
 .button a:hover {
@@ -197,6 +200,7 @@ header .header__logo img {
   background: linear-gradient(180deg, #FF8DE0, #A36FE1);
 }
 
+/* partie fonctionnement */
 .main__part_2 {
   width: 100%;
 }
@@ -217,13 +221,16 @@ header .header__logo img {
   border-radius: 20px;
   position: relative;
   margin: 0px 5% 20px 5%;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  /* hover liste fonctionnement shadow + couleur */
 }
 
 .main__part_2 li a:hover {
   background-color: #f5edff;
 }
 
-.main__part_2 li a:hover .menu__icon {
+* .main__part_2 li a:hover .menu__icon {
   color: #9356DC;
 }
 
@@ -268,29 +275,23 @@ aside {
   display: grid;
   -ms-grid-rows: 70% 30%;
       grid-template-rows: 70% 30%;
-  -webkit-transition: .2s;
-  transition: .2s;
 }
 
 .resto__img {
   border-radius: 20px 20px 0px 0px;
-  position: relative;
-  -o-object-fit: cover;
-     object-fit: cover;
   overflow: hidden;
   position: relative;
-}
-
-.resto__img .resto__img_overlay {
-  background-color: #770000;
-  position: absolute;
+  -o-object-fit: none;
+     object-fit: none;
+  -o-object-position: 20px 30%;
+     object-position: 20px 30%;
 }
 
 .resto__img_spe img {
-  -webkit-transform: translateY(-150px);
-          transform: translateY(-150px);
+  top: -100px;
 }
 
+/* carre vert "Nouveau" */
 .label_new {
   background-color: #99E2D0;
   height: 30px;
@@ -319,10 +320,45 @@ aside {
   margin-bottom: 5px;
 }
 
-.resto__txt i {
-  font-size: 24px;
-  margin-left: 20px;
-  margin-top: 5px;
+.hearts {
+  position: relative;
+}
+
+.hearts i {
+  font-size: 26px;
+  position: absolute;
+  top: 7px;
+  right: 39px;
+}
+
+.hearts .heart__hover {
+  background: linear-gradient(10deg, #FF8DE0, #A36FE1 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+
+.hearts .heart__hover:hover {
+  -webkit-animation: opacity_heart_gradient .5s ease-in forwards;
+          animation: opacity_heart_gradient .5s ease-in forwards;
+}
+
+/* animation hover coeur degrade */
+@-webkit-keyframes opacity_heart_gradient {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity_heart_gradient {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 footer {
