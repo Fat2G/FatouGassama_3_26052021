@@ -1,0 +1,64 @@
+@import "scss/_placeholders";
+@import "scss/_variables";
+
+@media screen and (min-width:481px) and (max-width:768px) {
+
+}
+
+@media screen and (min-width:769px) and (max-width:1340px) {
+  body{
+    max-width: 1340px;
+  }
+  .main__search_bar{
+    width: 500px;
+    margin: auto;
+    border-radius: 40px 10px 40px 10px;
+  }
+  .main__sections{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .main__part_2{
+    h2{
+      text-align: center;
+    }
+    li{
+      width: 350px;
+      margin: auto;
+    }
+  }
+  aside{
+    margin-top: 0px;
+  }
+  #restaurants{
+    background-color: $bg_gris_1;
+    h2{
+      text-align: center;
+      margin-bottom: 50px;
+      background-color: $bg_gris_2;
+      width: 200px;
+      border-radius: 20px;
+      padding: 15px 0px;
+      margin: 30px auto;
+    }
+    div article:nth-child(odd){
+      margin-left: 200px;
+    }
+    div article:nth-child(even){
+      margin-right: 200px;
+    }
+    .article_grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      row-gap: 20px;
+    }
+  }
+  footer{
+    .footer__liste{
+      ul{
+        grid-template-columns: repeat(4,1fr);
+      }
+    }  
+  }
+}
