@@ -189,7 +189,7 @@ header{
       &:hover {
         background-color: $coul_hover_1;
         @extend %hover__shadow;
-      }*/* changement couleur icon */
+      }/* changement couleur icon */
       &:hover .menu__icon{
         color: $coul_prim;
       }

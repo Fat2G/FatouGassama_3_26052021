@@ -361,13 +361,14 @@ header .header__logo img {
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
   /* hover liste fonctionnement shadow + couleur */
+  /* changement couleur icon */
 }
 
 .main__part_2 li a:hover {
   background-color: #f5edff;
 }
 
-* .main__part_2 li a:hover .menu__icon {
+.main__part_2 li a:hover .menu__icon {
   color: #9356DC;
 }
 
