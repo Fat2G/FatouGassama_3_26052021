@@ -12,6 +12,77 @@ body{
   max-width: 480px;
   text-align: center;
 }
+//loader
+.loader{
+  background: linear-gradient(45deg, $coul_ter, $coul_second);
+  position: absolute;
+  // inset: 0px;
+  top: 0; bottom: 0; left: 0; right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  animation: .9s opacite_loader 2s ease-out forwards ;
+}
+/* animation opacite loader */
+@keyframes opacite_loader{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+#load_circle_1{
+  background: transparent;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  border: solid 10px transparent;
+  border-left-color: $coul_ter;
+  border-right-color: $coul_ter;
+  @extend %center_circle;
+  animation: rotation 3s linear infinite;
+}
+#load_circle_2{
+  background-image: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  @extend %center_circle;
+  animation: scale 3s linear infinite;
+  span{
+    font-family: $font_spe;
+    font-size: 50px;
+    line-height: 100px;
+  }
+}
+/* animation rotation anneau loader */
+@keyframes rotation{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(360deg);
+  }
+}
+@keyframes scale{
+  0%{
+    transform: scale(100%);
+  }
+  25%{
+    transform: scale(110%);
+  }
+  50%{
+    transform: scale(100%);
+  }
+  75%{
+    transform: scale(110%);
+  }
+  100%{
+    transform: scale(100%);
+  }
+}
+
 // header
 header{
   position: relative;
