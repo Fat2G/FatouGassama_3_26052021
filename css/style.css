@@ -95,19 +95,20 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
-  max-width: 480px;
+  width: 100%;
   text-align: center;
 }
 
 .loader {
   background: linear-gradient(45deg, #99E2D0, #FF79DA);
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
+  overflow: hidden;
   z-index: 100;
   -webkit-animation: .9s opacite_loader 2s ease-out forwards;
           animation: .9s opacite_loader 2s ease-out forwards;
@@ -120,8 +121,8 @@ body {
             transform: translateX(0px);
   }
   100% {
-    -webkit-transform: translateX(-1400px);
-            transform: translateX(-1400px);
+    -webkit-transform: translateX(-1440px);
+            transform: translateX(-1440px);
   }
 }
 @keyframes opacite_loader {
@@ -130,8 +131,8 @@ body {
             transform: translateX(0px);
   }
   100% {
-    -webkit-transform: translateX(-1400px);
-            transform: translateX(-1400px);
+    -webkit-transform: translateX(-1440px);
+            transform: translateX(-1440px);
   }
 }
 
@@ -478,13 +479,19 @@ aside {
 .hearts .heart__hover {
   background: linear-gradient(10deg, #FF8DE0, #A36FE1 70%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
 }
 
-.hearts .heart__hover:hover {
+.hearts:hover .heart__hover {
   -webkit-animation: opacity_heart_gradient .5s ease-in forwards;
           animation: opacity_heart_gradient .5s ease-in forwards;
+}
+
+.hearts:hover .heart__stroke {
+  -webkit-animation: opacity_heart_stroke .5s ease-in forwards;
+          animation: opacity_heart_stroke .5s ease-in forwards;
 }
 
 /* animation hover coeur degrade */
@@ -502,6 +509,24 @@ aside {
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* animation hover coeur degrade */
+@-webkit-keyframes opacity_heart_stroke {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes opacity_heart_stroke {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

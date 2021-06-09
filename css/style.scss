@@ -9,28 +9,27 @@ body{
   font-family: $font;
   font-size: 16px;
   font-weight: 300;
-  max-width: 480px;
+  width: 100%;
   text-align: center;
 }
 //loader
 .loader{
   background: linear-gradient(45deg, $coul_ter, $coul_second);
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
   top: 0px; bottom: 0px; left: 0px; right: 0px;
+  overflow: hidden;
   z-index: 100;
   animation: .9s opacite_loader 2s ease-out forwards ;
 }
 /* animation opacite loader */
 @keyframes opacite_loader{
   0%{
-    // opacity: 1;
     transform: translateX(0px);
   }
   100%{
-    // opacity: 0;
-    transform: translateX(-1400px);
+    transform: translateX(-1440px);
   }
 }
 #load_circle_1{
@@ -83,7 +82,6 @@ body{
     transform: scale(1);
   }
 }
-
 // header
 header{
   position: relative;
@@ -294,11 +292,15 @@ aside{
   .heart__hover{    
     background: linear-gradient(10deg, #FF8DE0,#A36FE1 70%);    
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;
-    &:hover{
-      animation: opacity_heart_gradient .5s ease-in forwards;
-    }
+  }
+  &:hover .heart__hover{
+    animation: opacity_heart_gradient .5s ease-in forwards;
+  }
+  &:hover .heart__stroke{
+    animation: opacity_heart_stroke .5s ease-in forwards;
   }
 }
 /* animation hover coeur degrade */
@@ -308,6 +310,15 @@ aside{
   }
   100%{
     opacity: 1;
+  }
+}
+/* animation hover coeur degrade */
+@keyframes opacity_heart_stroke{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
   }
 }
 // Footer
