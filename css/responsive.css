@@ -1,3 +1,41 @@
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    margin: auto;
+  }
+  .main__part_2 h2 {
+    margin-left: 40px;
+  }
+  #restaurants h2 {
+    margin-left: 40px;
+  }
+  #restaurants .article_grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+  }
+  footer .footer__liste h3 {
+    margin-left: 30px;
+  }
+  footer .footer__liste ul {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    row-gap: 5px;
+    margin-left: 30px;
+  }
+  footer .footer__liste ul li:nth-child(3),
+  footer .footer__liste ul li:nth-child(4) {
+    margin-left: 23px;
+  }
+}
+
 @media screen and (min-width: 769px) and (max-width: 1440px) {
   body {
     max-width: 1440px;
@@ -6,13 +44,17 @@
   .main__search_bar {
     width: 500px;
     margin: auto;
-    border-radius: 40px 10px 40px 10px;
+    border-radius: 20px;
+    margin-bottom: 30px;
   }
   .main__sections {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+  }
+  .main__part_2 {
+    margin-bottom: 50px;
   }
   .main__part_2 h2 {
     text-align: center;
@@ -26,6 +68,7 @@
   }
   #restaurants {
     background-color: #EAEAEA;
+    padding-bottom: 40px;
   }
   #restaurants h2 {
     text-align: center;
@@ -34,7 +77,7 @@
     width: 200px;
     border-radius: 20px;
     padding: 15px 0px;
-    margin: 30px auto;
+    margin: 30px auto 40px auto;
   }
   #restaurants div article:nth-child(odd) {
     margin-left: 200px;
@@ -50,6 +93,8 @@
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     row-gap: 20px;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
   }
   footer .footer__liste ul {
     -ms-grid-columns: (1fr)[4];
