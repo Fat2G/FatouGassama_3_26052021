@@ -47,12 +47,12 @@ header, .main__search_bar {
           align-items: center;
 }
 
-.button a, .main__part_2 li a, .resto__article, .label_new {
+.Btn, .main__part_2 li a, .resto__article, .label_new {
   -webkit-box-shadow: 0px 5px 8px -2px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 5px 8px -2px rgba(0, 0, 0, 0.2);
 }
 
-.button a:hover, .main__part_2 li a:hover {
+.Btn:hover, .main__part_2 li a:hover {
   -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.4);
 }
@@ -232,23 +232,10 @@ body {
   }
 }
 
+/* PAGE ACCUEIL */
 header {
   position: relative;
   margin: 23px 0px 12px 0px;
-  /* fleche non visible dans page accueil */
-}
-
-header .header__arrow_icon {
-  color: #353535;
-  position: absolute;
-  left: 0px;
-  padding: 22px;
-  display: none;
-}
-
-header .header__arrow_icon i {
-  font-size: 20px;
-  color: #353535;
 }
 
 header .header__logo img {
@@ -305,7 +292,7 @@ header .header__logo img {
 /* partie Reservez... */
 .main__part_1 {
   background-color: #F6F6F6;
-  padding: 20px 0px 80px 0px;
+  padding-top: 20px;
 }
 
 .main__part_1 h1 {
@@ -319,27 +306,22 @@ header .header__logo img {
   margin: 22px 0px 45px 0px;
 }
 
-.button {
-  position: relative;
-}
-
-.button a {
+.Btn {
   font-size: 16px;
   font-weight: 500;
   color: white;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: auto;
   padding: 15px 22px;
+  margin-bottom: 57px;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(180deg, #FF79DA, #9356DC);
   border-radius: 30px;
+  border: none;
+  cursor: pointer;
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
 }
 
-.button a:hover {
+.Btn:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF8DE0), to(#A36FE1));
   background: linear-gradient(180deg, #FF8DE0, #A36FE1);
 }
