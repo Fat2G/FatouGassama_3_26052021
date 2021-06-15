@@ -63,3 +63,21 @@
     transform: rotate(360deg);
   }
 }
+/* slide du check_container vert*/
+@keyframes check_slide{
+  0%{
+    transform: scaleX(0);
+  }
+  100%{
+    transform: scaleX(1);
+  }
+}
+/* translate du prix*/
+@keyframes price_translate{
+  0%{
+    transform: translateX(70px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
