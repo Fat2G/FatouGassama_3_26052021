@@ -34,3 +34,22 @@
     transform: scale(1);
   }
 }
+// ACCUEIL
+/* animation hover coeur dégradé */
+@keyframes opacity_heart_gradient{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+/* animation hover coeur au bord noir */
+@keyframes opacity_heart_stroke{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
