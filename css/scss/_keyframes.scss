@@ -53,3 +53,13 @@
     opacity: 0;
   }
 }
+// MENU
+/* rotation icone check */
+@keyframes check_rotation{
+  0%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
