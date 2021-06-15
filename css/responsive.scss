@@ -95,6 +95,38 @@
       column-gap: 30px;
     }
   }
+  #page_menu{
+    max-width: 1440px;
+    margin: auto;
+    .menu__section_grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 30px;  
+    }
+    main{
+      figure{        
+        top: -90px;
+      }
+      .menu__container{        
+        border-radius: 35px;  
+      }
+      .menu{
+        margin: 0px 2% 0 2%;
+      }
+      .menu__titre{
+        justify-content: center;
+      }
+      .menu__section{
+        article{
+          max-width: 330px;
+        }
+      }
+      
+    }
+    .menu__container{
+      margin:  5%;
+    }
+  }
   footer{
     .footer__liste{
       ul{
