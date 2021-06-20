@@ -1,6 +1,6 @@
-/* @import "./_mixins"; */
 @import "scss/_placeholders";
 @import "scss/_variables";
+@import "scss/_keyframes";
 
 *{
   @extend %reset;
@@ -21,16 +21,7 @@ body{
   top: 0px; bottom: 0px; left: 0px; right: 0px;
   overflow: hidden;
   z-index: 100;
-  animation: .9s opacite_loader 2s ease-out forwards ;
-}
-/* animation opacite loader */
-@keyframes opacite_loader{
-  0%{
-    transform: translateX(0px);
-  }
-  100%{
-    transform: translateX(-1440px);
-  }
+  animation: 900ms opacite_loader 2000ms ease-out forwards ;
 }
 #load_circle_1{
   background: transparent;
@@ -49,37 +40,11 @@ body{
   height: 100px;
   border-radius: 50%;
   @extend %center_circle;
-  animation: scale 3s linear infinite;
+  animation: scale 3000ms linear infinite;
   span{
     font-family: $font_spe;
     font-size: 50px;
     line-height: 100px;
-  }
-}
-/* animation rotation anneau loader */
-@keyframes rotation{
-  0%{
-    transform: rotate(0deg);
-  }
-  50%{
-    transform: rotate(360deg);
-  }
-}
-@keyframes scale{
-  0%{
-    transform: scale(1);
-  }
-  25%{
-    transform: scale(1.1);
-  }
-  50%{
-    transform: scale(1);
-  }
-  75%{
-    transform: scale(1.1);
-  }
-  100%{
-    transform: scale(1);
   }
 }
 /* PAGE ACCUEIL */
@@ -147,7 +112,7 @@ header{
   border: none;
   cursor: pointer;
   @extend %shadow;
-  transition: all .25s ease-in-out;
+  transition: all 250ms ease-in-out;
   &:hover{
     @extend %hover__shadow;
     background: linear-gradient(180deg, #FF8DE0,#A36FE1);
@@ -172,7 +137,7 @@ header{
       position: relative;
       margin: 0px 5% 20px 5%;
       @extend %shadow;
-      transition: all .25s ease-in-out;
+      transition: all 250ms ease-in-out;
       /* hover liste fonctionnement shadow + couleur */
       &:hover {
         background-color: $coul_hover_1;
@@ -270,11 +235,17 @@ aside{
 }
 .hearts{
   position: relative;
+  // transition: all 100ms ease-out;
   i{
     font-size: 26px;
     position: absolute;
     top: 7px;
     right: 39px;
+    
+  }
+  .heart__stroke{
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
   }
   .heart__hover{    
     background: linear-gradient(10deg, #FF8DE0,#A36FE1 70%);    
@@ -282,29 +253,12 @@ aside{
     background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;
+    transition: opacity 500ms ease-in-out;    
   }
   &:hover .heart__hover{
-    animation: opacity_heart_gradient .5s ease-in forwards;
+    opacity: 1;
   }
   &:hover .heart__stroke{
-    animation: opacity_heart_stroke .5s ease-in forwards;
-  }
-}
-/* animation hover coeur degrade */
-@keyframes opacity_heart_gradient{
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-/* animation hover coeur degrade */
-@keyframes opacity_heart_stroke{
-  0%{
-    opacity: 1;
-  }
-  100%{
     opacity: 0;
   }
 }
@@ -339,6 +293,179 @@ footer{
   .fa-hands-helping{
     font-size: 10px;
     margin-right: 7px;
+  }
+}
+/* PAGE MENU */
+#page_menu{
+  header{
+    position: relative;
+    background-color: white;
+    
+    /* fleche non visible dans page accueil */
+    .header__arrow_icon{
+      color: $coul_txt;
+      position: absolute;
+      left: 0px;
+      top: -18px;
+      padding: 22px;
+      i{
+        font-size: 18px;
+        color: $coul_txt;
+      }
+    }
+    /* logo */
+    .header__logo{
+      img{
+        width: 80%;
+      }
+    }  
+  }
+  main{
+    position: relative;
+    /* photo du restaurant */
+    figure{
+      height: 265px;
+      position: absolute;
+      z-index: -1;
+      top: -220px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .menu__container{
+    background: $bg_gris_1;
+    border-radius: 35px 35px 0px 0px;
+    margin-top: 220px;    
+  }
+  .menu{
+    margin: 0px 5% 0 5%;
+  }
+  .menu__titre{
+    padding: 40px 0px 8px 0px;
+    display: flex;
+    h1{
+      font-family: $font_spe;
+      font-size: 28px;
+    }
+    .hearts__menu{
+      i{
+        font-size: 22px;
+        position: absolute;
+        right: -70px;
+        top: 8px;
+      }
+    }
+  }
+  .menu__section_grid{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .menu__section{
+    text-align: start;
+    h2{
+      text-transform: uppercase;
+      margin: 37px 0px 6px 0px;
+    }
+    .underline{
+      height: 3px;
+      width: 50px;
+      background-color: $coul_ter;
+      margin-bottom: 15px;
+    }
+    article{
+      background: white;
+      max-width: 350px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      @extend %shadow;      
+      
+      &:hover .anim_check{
+        transform: rotate(360deg);
+      }
+      &:hover .anim_check__container{          
+        transform: translateX(0px);      
+      }
+      &:hover .menu__prix{
+        transform: translateX(-71px);
+      }
+      &:hover .menu__textes{
+        width: 200px;
+      }
+      .menu__article{
+        display: flex;
+        grid-template-columns: 4fr 1fr 1fr;
+        font-size: 14px;
+        margin-left: 12px; 
+        position: relative; 
+      }
+      .menu__textes{ 
+        // A SUPPRIMER
+        // border: 1px solid black;
+        width: 250px;
+        /* transition translate du container */
+        transition: width 500ms ease-in-out; 
+              
+        h3, h4{
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }         
+        h3{
+          padding: 15px 0px 8px 0px;
+          font-size: 18px;
+          font-weight: 500;          
+        }
+        h4{
+          margin-bottom: 13px;
+        }      
+      }
+      .menu__prix{
+        display: flex;
+        align-self: flex-end;
+        justify-self: flex-end;
+        margin-bottom: 12px;
+        padding: 40px 20px 0px 15px;
+        position: absolute;
+        right: 0px;
+        transform: translateX(0px);
+        /* transition translate du container */
+        transition: transform 500ms ease-in-out;
+        
+        span{
+          font-weight: 700;
+          font-size: 16px;           
+        }        
+      }
+    }
+    .anim_check__container{
+      position: absolute;
+      right: 0;
+      height: 100%;
+      width: 70px;
+      background: $coul_ter;
+      margin-left: 12px;      
+      /* emplacement de l'icone */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* position du container */
+      transform: translateX(71px);
+      /* transition translate du container */
+      transition: transform 500ms ease-in-out;       
+      
+      i{
+        color: white;
+        font-size: 20px;
+      }
+    }
+  }
+  /* ajout de propriétés au bouton de la page accueil */
+  .Btn{
+    margin-top: 34px;
+    padding: 20px 50px;
   }
 }
 
