@@ -403,8 +403,8 @@ footer{
       }
       .menu__textes{ 
         // A SUPPRIMER
-        // border: 1px solid black;
-        width: 250px;
+        border: 1px solid black;
+        width: 280px;
         /* transition translate du container */
         transition: width 500ms ease-in-out; 
               
@@ -464,13 +464,58 @@ footer{
         color: white;
         font-size: 20px;
       }
-
     }
   }
   /* ajout de propriétés au bouton de la page accueil */
   .Btn{
     margin-top: 34px;
     padding: 20px 50px;
+  }
+  /* animation apparition des articles */
+  .anim_apparition{
+    opacity: 0;
+    // transform: translateY(40px);
+    animation: apparition_menu 250ms ease-out forwards;
+  }
+  .anim_delay_1{
+    // animation-delay: 250ms;
+    animation-delay: 125ms;
+  }
+  .anim_delay_2{
+    // animation-delay: 500ms;
+    animation-delay: 250ms;
+  }
+  .anim_delay_3{
+    // animation-delay: 750ms;
+    animation-delay: 375ms;
+  }
+  .anim_delay_4{
+    // animation-delay: 1000ms;
+    animation-delay: 500ms;
+  }
+  .anim_delay_5{
+    // animation-delay: 1250ms;
+    animation-delay: 625ms;
+  }
+  .anim_delay_6{
+    // animation-delay: 1500ms;
+    animation-delay: 750ms;
+  }
+  .anim_delay_7{
+    // animation-delay: 1750ms;
+    animation-delay: 875ms;
+  }
+  .anim_delay_8{
+    // animation-delay: 2000ms;
+    animation-delay: 1000ms;
+  }
+  .anim_delay_9{
+    // animation-delay: 2250ms;
+    animation-delay: 1125ms;
+  }
+  .anim_delay_10{
+    // animation-delay: 2500ms;
+    animation-delay: 1250ms;
   }
 }
 
