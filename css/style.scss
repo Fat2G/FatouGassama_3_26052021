@@ -454,12 +454,17 @@ footer{
       /* position du container */
       transform: translateX(71px);
       /* transition translate du container */
-      transition: transform 500ms ease-in-out;       
-      
+      transition: transform 500ms ease-in-out; 
+    }
+    .anim_check{
+      transform: rotate(0deg);
+      /* transition rotation de l'icone */
+      transition: transform 450ms linear;
       i{
         color: white;
         font-size: 20px;
       }
+
     }
   }
   /* ajout de propriétés au bouton de la page accueil */
