@@ -1,11 +1,16 @@
 // LOADER
-/* animation opacite loader */
-@keyframes opacite_loader{
+/* animation loader */
+@keyframes loader{
   0%{
     transform: translateX(0px);
+    visibility: visible;
+  }
+  99%{
+    visibility: visible;
   }
   100%{
     transform: translateX(-1440px);
+    visibility: hidden;
   }
 }
 /* animation rotation anneau loader */
@@ -13,7 +18,7 @@
   0%{
     transform: rotate(0deg);
   }
-  50%{
+  100%{
     transform: rotate(360deg);
   }
 }

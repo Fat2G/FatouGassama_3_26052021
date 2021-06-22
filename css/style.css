@@ -26,7 +26,8 @@
   color: black;
 }
 
-#load_circle_1, #load_circle_2 {
+#load_circle_1,
+#load_circle_1_bis, #load_circle_2 {
   margin: auto;
   position: absolute;
   top: 0;
@@ -91,25 +92,35 @@ footer .footer__liste ul {
   top: -50px;
 }
 
-/* animation opacite loader */
-@-webkit-keyframes opacite_loader {
+/* animation loader */
+@-webkit-keyframes loader {
   0% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
   }
   100% {
     -webkit-transform: translateX(-1440px);
             transform: translateX(-1440px);
+    visibility: hidden;
   }
 }
-@keyframes opacite_loader {
+@keyframes loader {
   0% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
   }
   100% {
     -webkit-transform: translateX(-1440px);
             transform: translateX(-1440px);
+    visibility: hidden;
   }
 }
 
@@ -119,7 +130,7 @@ footer .footer__liste ul {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  50% {
+  100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
@@ -129,7 +140,7 @@ footer .footer__liste ul {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  50% {
+  100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
@@ -226,11 +237,12 @@ body {
   right: 0px;
   overflow: hidden;
   z-index: 100;
-  -webkit-animation: 900ms opacite_loader 2000ms ease-out forwards;
-          animation: 900ms opacite_loader 2000ms ease-out forwards;
+  -webkit-animation: 900ms loader 2000ms ease-out forwards;
+          animation: 900ms loader 2000ms ease-out forwards;
 }
 
-#load_circle_1 {
+#load_circle_1,
+#load_circle_1_bis {
   background: transparent;
   border-radius: 50%;
   width: 120px;
@@ -238,8 +250,14 @@ body {
   border: solid 10px transparent;
   border-left-color: #99E2D0;
   border-right-color: #99E2D0;
-  -webkit-animation: rotation 3s linear infinite;
-          animation: rotation 3s linear infinite;
+  -webkit-animation: rotation 2500ms linear infinite;
+          animation: rotation 2500ms linear infinite;
+}
+
+#load_circle_1_bis {
+  width: 160px;
+  height: 160px;
+  animation: rotation 2500ms linear infinite reverse;
 }
 
 #load_circle_2 {
@@ -248,8 +266,8 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  -webkit-animation: scale 3000ms linear infinite;
-          animation: scale 3000ms linear infinite;
+  -webkit-animation: scale 2500ms linear infinite;
+          animation: scale 2500ms linear infinite;
 }
 
 #load_circle_2 span {
