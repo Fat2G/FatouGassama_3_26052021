@@ -1,4 +1,19 @@
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  #page_menu main figure {
+    top: -180px;
+  }
+  #page_menu .menu__container {
+    margin-top: 180px;
+  }
+  #page_menu .menu__titre .hearts__menu i {
+    right: -40px;
+  }
+  #page_menu .menu__section article:hover .menu__textes {
+    width: 160px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
   body {
     margin: auto;
   }
@@ -19,6 +34,15 @@
     -webkit-column-gap: 10px;
             column-gap: 10px;
   }
+  #page_menu main figure {
+    top: -260px;
+  }
+  #page_menu .menu__container {
+    margin-top: 260px;
+  }
+  #page_menu .menu__section article {
+    max-width: none;
+  }
   footer .footer__liste h3 {
     margin-left: 30px;
   }
@@ -36,7 +60,7 @@
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1440px) {
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
   body {
     max-width: 1440px;
     margin: auto;
@@ -99,6 +123,7 @@
   #page_menu {
     max-width: 1440px;
     margin: auto;
+    /* anim apparition menus */
   }
   #page_menu .menu__section_grid {
     display: -ms-grid;
@@ -109,7 +134,8 @@
             column-gap: 30px;
   }
   #page_menu main figure {
-    top: -90px;
+    height: 100%;
+    top: -260px;
   }
   #page_menu main .menu__container {
     border-radius: 35px;
@@ -125,8 +151,51 @@
   #page_menu main .menu__section article {
     max-width: 330px;
   }
+  #page_menu main .menu__section article:hover .menu__textes {
+    width: 190px;
+  }
   #page_menu .menu__container {
     margin: 5%;
+  }
+  #page_menu .anim_delay_1 {
+    -webkit-animation-delay: 125ms;
+            animation-delay: 125ms;
+  }
+  #page_menu .anim_delay_2 {
+    -webkit-animation-delay: 250ms;
+            animation-delay: 250ms;
+  }
+  #page_menu .anim_delay_3 {
+    -webkit-animation-delay: 375ms;
+            animation-delay: 375ms;
+  }
+  #page_menu .anim_delay_4 {
+    -webkit-animation-delay: 500ms;
+            animation-delay: 500ms;
+  }
+  #page_menu .anim_delay_5 {
+    -webkit-animation-delay: 125ms;
+            animation-delay: 125ms;
+  }
+  #page_menu .anim_delay_6 {
+    -webkit-animation-delay: 250ms;
+            animation-delay: 250ms;
+  }
+  #page_menu .anim_delay_7 {
+    -webkit-animation-delay: 375ms;
+            animation-delay: 375ms;
+  }
+  #page_menu .anim_delay_8 {
+    -webkit-animation-delay: 125ms;
+            animation-delay: 125ms;
+  }
+  #page_menu .anim_delay_9 {
+    -webkit-animation-delay: 250ms;
+            animation-delay: 250ms;
+  }
+  #page_menu .anim_delay_10 {
+    -webkit-animation-delay: 375ms;
+            animation-delay: 375ms;
   }
   footer .footer__liste ul {
     -ms-grid-columns: (1fr)[4];

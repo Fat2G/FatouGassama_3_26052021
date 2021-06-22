@@ -1,6 +1,33 @@
 @import "scss/_variables";
 
-@media screen and (min-width:481px) and (max-width:768px) {
+@media screen and (min-width:320px) and (max-width:374px) {
+  #page_menu{
+    main{
+      figure{
+        top: -180px;
+      }
+    }
+    .menu__container{
+      margin-top: 180px;
+    }
+    .menu__titre{
+      .hearts__menu{
+        i{      
+          right: -40px;      
+        }
+      }
+    }
+    .menu__section{
+      article{
+        &:hover .menu__textes{
+          width: 160px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:481px) and (max-width:1024px) {
   body{
     margin: auto;
   }
@@ -19,6 +46,21 @@
       grid-template-rows: 1fr 1fr;
       row-gap: 20px;
       column-gap: 10px;
+    }
+  }
+  #page_menu{
+    main{
+      figure{
+        top: -260px;
+      }
+    }
+    .menu__container{
+      margin-top: 260px;    
+    }
+    .menu__section{
+      article{
+        max-width: none;
+      }
     }
   }
 
@@ -40,8 +82,7 @@
     }  
   }
 }
-
-@media screen and (min-width:769px) and (max-width:1440px) {
+@media screen and (min-width:1025px) and (max-width:1440px) {
   body{
     max-width: 1440px;
     margin: auto;
@@ -105,7 +146,9 @@
     }
     main{
       figure{        
-        top: -90px;
+        height: 100%;
+        top: -260px;
+        
       }
       .menu__container{        
         border-radius: 35px;  
@@ -119,14 +162,48 @@
       .menu__section{
         article{
           max-width: 330px;
+          &:hover .menu__textes{
+            width: 190px;
+          }
         }
       }
-      
     }
     .menu__container{
-      margin:  5%;
+      margin: 5%;
     }
+    /* anim apparition menus */
+  .anim_delay_1{
+    animation-delay: 125ms;
   }
+  .anim_delay_2{
+    animation-delay: 250ms;
+  }
+  .anim_delay_3{
+    animation-delay: 375ms;
+  }
+  .anim_delay_4{
+    animation-delay: 500ms;
+  }
+  .anim_delay_5{
+    animation-delay: 125ms;
+  }
+  .anim_delay_6{
+    animation-delay: 250ms;
+  }
+  .anim_delay_7{
+    animation-delay: 375ms;
+  }
+  .anim_delay_8{
+    animation-delay: 125ms;
+  }
+  .anim_delay_9{
+    animation-delay: 250ms;
+  }
+  .anim_delay_10{
+    animation-delay: 375ms;
+  }
+  }
+  
   footer{
     .footer__liste{
       ul{
