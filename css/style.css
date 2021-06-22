@@ -553,6 +553,7 @@ footer .fa-hands-helping {
 #page_menu header {
   position: relative;
   background-color: white;
+  margin-top: 0px;
   /* fleche non visible dans page accueil */
   /* logo */
 }
@@ -561,13 +562,17 @@ footer .fa-hands-helping {
   color: #353535;
   position: absolute;
   left: 0px;
-  top: -18px;
+  top: 6px;
   padding: 22px;
 }
 
 #page_menu header .header__arrow_icon i {
   font-size: 18px;
   color: #353535;
+}
+
+#page_menu header .header__logo {
+  padding: 23px 0px 8px 0px;
 }
 
 #page_menu header .header__logo img {
@@ -682,7 +687,6 @@ footer .fa-hands-helping {
 }
 
 #page_menu .menu__section article .menu__textes {
-  border: 1px solid black;
   width: 280px;
   /* transition translate du container */
   -webkit-transition: width 500ms ease-in-out;
