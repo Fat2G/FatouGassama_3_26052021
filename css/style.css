@@ -820,38 +820,38 @@ footer .fa-hands-helping {
           animation-delay: 375ms;
 }
 
-#page_menu .anim_delay_4 {
+#page_menu .anim_delay_spe {
   -webkit-animation-delay: 500ms;
           animation-delay: 500ms;
 }
 
-#page_menu .anim_delay_5 {
+#page_menu .anim_delay_4 {
   -webkit-animation-delay: 625ms;
           animation-delay: 625ms;
 }
 
-#page_menu .anim_delay_6 {
+#page_menu .anim_delay_5 {
   -webkit-animation-delay: 750ms;
           animation-delay: 750ms;
 }
 
-#page_menu .anim_delay_7 {
+#page_menu .anim_delay_6 {
   -webkit-animation-delay: 875ms;
           animation-delay: 875ms;
 }
 
-#page_menu .anim_delay_8 {
-  -webkit-animation-delay: 1000ms;
-          animation-delay: 1000ms;
-}
-
-#page_menu .anim_delay_9 {
+#page_menu .anim_delay_7 {
   -webkit-animation-delay: 1125ms;
           animation-delay: 1125ms;
 }
 
-#page_menu .anim_delay_10 {
+#page_menu .anim_delay_8 {
   -webkit-animation-delay: 1250ms;
           animation-delay: 1250ms;
+}
+
+#page_menu .anim_delay_9 {
+  -webkit-animation-delay: 1375ms;
+          animation-delay: 1375ms;
 }
 /*# sourceMappingURL=style.css.map */
