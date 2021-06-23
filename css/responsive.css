@@ -60,9 +60,8 @@
   }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+@media screen and (min-width: 1025px) and (max-width: 1920px) {
   body {
-    max-width: 1440px;
     margin: auto;
   }
   .main__search_bar {
@@ -121,7 +120,6 @@
             column-gap: 30px;
   }
   #page_menu {
-    max-width: 1440px;
     margin: auto;
     /* anim apparition menus */
   }
