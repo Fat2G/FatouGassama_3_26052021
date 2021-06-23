@@ -134,8 +134,10 @@
             column-gap: 30px;
   }
   #page_menu main figure {
-    height: 100%;
     top: -260px;
+  }
+  #page_menu main figure img {
+    max-height: 1100px;
   }
   #page_menu main .menu__container {
     border-radius: 35px;

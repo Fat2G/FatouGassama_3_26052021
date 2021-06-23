@@ -146,9 +146,10 @@
     }
     main{
       figure{        
-        height: 100%;
         top: -260px;
-        
+        img{
+          max-height: 1100px;
+        }
       }
       .menu__container{        
         border-radius: 35px;  
