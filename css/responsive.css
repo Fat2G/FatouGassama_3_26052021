@@ -172,32 +172,32 @@
             animation-delay: 375ms;
   }
   #page_menu .anim_delay_4 {
-    -webkit-animation-delay: 500ms;
-            animation-delay: 500ms;
+    -webkit-animation-delay: 125ms;
+            animation-delay: 125ms;
   }
   #page_menu .anim_delay_5 {
-    -webkit-animation-delay: 125ms;
-            animation-delay: 125ms;
+    -webkit-animation-delay: 250ms;
+            animation-delay: 250ms;
   }
   #page_menu .anim_delay_6 {
-    -webkit-animation-delay: 250ms;
-            animation-delay: 250ms;
-  }
-  #page_menu .anim_delay_7 {
     -webkit-animation-delay: 375ms;
             animation-delay: 375ms;
   }
-  #page_menu .anim_delay_8 {
+  #page_menu .anim_delay_7 {
     -webkit-animation-delay: 125ms;
             animation-delay: 125ms;
   }
-  #page_menu .anim_delay_9 {
+  #page_menu .anim_delay_8 {
     -webkit-animation-delay: 250ms;
             animation-delay: 250ms;
   }
-  #page_menu .anim_delay_10 {
+  #page_menu .anim_delay_9 {
     -webkit-animation-delay: 375ms;
             animation-delay: 375ms;
+  }
+  #page_menu .anim_delay_spe {
+    -webkit-animation-delay: 500ms;
+            animation-delay: 500ms;
   }
   footer .footer__liste ul {
     -ms-grid-columns: (1fr)[4];
