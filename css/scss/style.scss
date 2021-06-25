@@ -1,0 +1,519 @@
+@import "scss/_placeholders";
+@import "scss/_variables";
+@import "scss/_keyframes";
+
+*{
+  @extend %reset;
+}
+body{
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+}
+//loader
+.loader{
+  background: linear-gradient(45deg, $coul_ter, $coul_second);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0px; bottom: 0px; left: 0px; right: 0px;
+  overflow: hidden;
+  z-index: 100;
+  animation: 900ms loader 2000ms ease-out forwards ;
+}
+#load_circle_1,
+#load_circle_1_bis{
+  background: transparent;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  border: solid 10px transparent;
+  border-left-color: $coul_ter;
+  border-right-color: $coul_ter;
+  @extend %center_circle;
+  animation: rotation 2500ms linear infinite;
+}
+#load_circle_1_bis{
+  width: 160px;
+  height: 160px;
+  animation: rotation 2500ms linear infinite reverse;
+}
+#load_circle_2{
+  background-image: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  @extend %center_circle;
+  animation: scale 2500ms linear infinite;
+  span{
+    font-family: $font_spe;
+    font-size: 50px;
+    line-height: 100px;
+  }
+}
+/* PAGE ACCUEIL */
+// header
+header{
+  position: relative;
+  @extend %flex_center;
+  margin: 23px 0px 12px 0px;
+  .header__logo{
+    img{
+      width: 90%;
+    }
+  }
+}
+// main
+/* barre de recherche */
+.main__search_bar{
+  @extend %flex_center;
+  background-image: linear-gradient(to bottom,$noir_transp, $bg_gris_1 15%,$bg_gris_1);
+  padding: 15px 0px 10px 0px;
+  i{
+    color: $coul_txt;
+    font-size: 18px; 
+    transform: translateY(-2px);
+    padding-left: 45px;
+  }
+  input{
+    justify-items: start;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: $coul_txt;
+    padding: 10px 0px;
+    padding-left: 15px;
+    background-color: $bg_gris_1;
+  }
+  ::placeholder{
+    color: $coul_txt;
+    font-family: inherit;    
+  }
+}
+/* partie Reservez... */
+.main__part_1{
+  background-color: $bg_gris_2;
+  padding-top: 20px;
+  h1{
+    padding-top: 30px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  h2{
+    font-size: 18px;
+    margin: 22px 0px 45px 0px;
+  }
+}
+.Btn{
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  padding: 15px 22px;
+  margin-bottom: 57px;
+  background: linear-gradient(180deg, $coul_second,$coul_prim);
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  @extend %shadow;
+  transition: all 250ms ease-in-out;
+  &:hover{
+    @extend %hover__shadow;
+    background: linear-gradient(180deg, #FF8DE0,#A36FE1);
+  } 
+}
+/* partie fonctionnement */
+.main__part_2{
+  width: 100%;
+  h2{
+    @extend %article__titres;
+  }
+  ul{
+    padding-left: 10px;
+  }
+  li{
+    a{
+      display: grid;
+      grid-template-columns: 73px 1fr;
+      align-items: center;
+      background-color: $bg_gris_2;
+      border-radius: 20px;
+      position: relative;
+      margin: 0px 5% 20px 5%;
+      @extend %shadow;
+      transition: all 250ms ease-in-out;
+     
+      &:hover {
+         /* hover liste fonctionnement shadow + couleur */
+        background-color: $coul_hover_1;
+        @extend %hover__shadow;
+      }
+      
+      &:hover .menu__icon{
+        /* changement couleur icon */
+        color: $coul_prim;
+      }
+    }
+    h3{
+      color: #000;
+      font-weight: 500;
+      text-align: start;
+      padding: 30px 0px 24px 0px;
+    }
+  }
+}
+.menu__num_circle{
+  color: #FFF;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: $coul_prim;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  line-height: 24px;
+  position: absolute;
+  left: -12px;
+  bottom: 23px;
+}
+.menu__icon{
+  color: $coul_icon;
+  font-size: 18px;
+  margin: 7px 0px 0px 10px;
+}
+// aside
+aside{
+  margin-top: 70PX;
+}
+#restaurants{
+  background-color: $bg_gris_2;
+  padding: 10px 0px 60px 0px;
+  h2{
+    @extend %article__titres;
+  }
+}
+.resto__article{
+  @extend %article__accueil;
+  @extend %shadow;
+  display: grid;
+  grid-template-rows: 70% 30%;
+}
+.resto__img{
+  border-radius: 20px 20px 0px 0px;
+  overflow: hidden;
+  position: relative;
+  object-fit: none;
+  object-position: 20px 30% ;
+  
+  img{
+    @extend %resto__img;
+  }
+}
+.resto__img_spe{
+  img{
+    top: -100px;
+  }
+}
+/* carre vert "Nouveau" */
+.label_new{
+  background-color: $coul_green_1;
+  height: 30px;
+  width: 80px;
+  color: $txt_green_1;
+  font-weight: 500;
+  line-height: 30px;
+  padding: 0px 5px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  @extend %shadow;
+}
+.resto__txt{
+  display: grid;
+  grid-template-columns: 80% 20%;
+  text-align: start;
+  margin: 15px 0px 0px 15px;
+  
+  h3{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+}
+.hearts{
+  position: relative;
+  // transition: all 100ms ease-out;
+  i{
+    font-size: 26px;
+    position: absolute;
+    top: 7px;
+    right: 39px;
+    
+  }
+  .heart__stroke{
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+  }
+  .heart__hover{    
+    background: linear-gradient(10deg, #FF8DE0,#A36FE1 70%);    
+    -webkit-background-clip: text;
+    /* background-clip: text; */
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;    
+  }
+  &:hover .heart__hover{
+    opacity: 1;
+  }
+  &:hover .heart__stroke{
+    opacity: 0;
+  }
+}
+// Footer
+footer{
+  text-align: start;
+  background-color: $coul_txt;
+  bottom: 0;
+  color: #FFF;
+  h3{
+    font-family: $font-spe;
+    font-size: 18px ;
+    margin-bottom: 20px;
+  }
+  .footer__liste{
+    margin: 0px 5%;
+    padding: 25px 0px;
+    ul{
+      @extend %grid;
+    }
+  }
+  li{
+    margin-bottom: 10px;
+  }
+  a{
+    color: #FFF;
+    i{
+      font-size: 12px;
+      margin-right: 10px;
+    }
+  }
+  .fa-hands-helping{
+    font-size: 10px;
+    margin-right: 7px;
+  }
+}
+/* PAGE MENU */
+#page_menu{
+  header{
+    position: relative;
+    background-color: white;
+    margin-top: 0px;
+    
+    .header__arrow_icon{
+      color: $coul_txt;
+      position: absolute;
+      left: 0px;
+      top: 6px;
+      padding: 22px;
+      i{
+        font-size: 18px;
+        color: $coul_txt;
+      }
+    }
+    .header__logo{
+      padding: 23px 0px 8px 0px;
+      img{
+        width: 80%;
+      }
+    }  
+  }
+  main{
+    position: relative;
+    figure{
+      /* photo du restaurant */
+      height: 265px;
+      position: absolute;
+      z-index: -1;
+      top: -220px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .menu__container{
+    background: $bg_gris_1;
+    border-radius: 35px 35px 0px 0px;
+    margin-top: 220px;    
+  }
+  .menu{
+    margin: 0px 5% 0 5%;
+  }
+  .menu__titre{
+    padding: 40px 0px 8px 0px;
+    display: flex;
+    h1{
+      font-family: $font_spe;
+      font-size: 28px;
+    }
+    .hearts__menu{
+      i{
+        font-size: 22px;
+        position: absolute;
+        right: -70px;
+        top: 8px;
+      }
+    }
+  }
+  .menu__section_grid{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .menu__section{
+    text-align: start;
+    h2{
+      text-transform: uppercase;
+      margin: 37px 0px 6px 0px;
+    }
+    .underline{
+      height: 3px;
+      width: 50px;
+      background-color: $coul_ter;
+      margin-bottom: 15px;
+    }
+    article{
+      background: white;
+      max-width: 350px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      @extend %shadow;      
+      
+      &:hover .anim_check{
+        transform: rotate(360deg);
+      }
+      &:hover .anim_check__container{          
+        transform: translateX(0px);      
+      }
+      &:hover .menu__prix{
+        transform: translateX(-71px);
+      }
+      &:hover .menu__textes{
+        width: 200px;
+      }
+      .menu__article{
+        display: flex;
+        grid-template-columns: 4fr 1fr 1fr;
+        font-size: 14px;
+        margin-left: 12px; 
+        position: relative; 
+      }
+      .menu__textes{ 
+        width: 280px;
+        /* transition translate du container */
+        transition: width 500ms ease-in-out; 
+              
+        h3, h4{
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }         
+        h3{
+          padding: 15px 0px 8px 0px;
+          font-size: 18px;
+          font-weight: 500;          
+        }
+        h4{
+          margin-bottom: 13px;
+        }      
+      }
+      .menu__prix{
+        display: flex;
+        align-self: flex-end;
+        justify-self: flex-end;
+        margin-bottom: 12px;
+        padding: 40px 20px 0px 15px;
+        position: absolute;
+        right: 0px;
+        transform: translateX(0px);
+        /* transition translate du container */
+        transition: transform 500ms ease-in-out;
+        
+        span{
+          font-weight: 700;
+          font-size: 16px;           
+        }        
+      }
+    }
+    .anim_check__container{
+      position: absolute;
+      right: 0;
+      height: 100%;
+      width: 70px;
+      background: $coul_ter;
+      margin-left: 12px;      
+      /* emplacement de l'icone */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* position du container */
+      transform: translateX(71px);
+      /* transition translate du container */
+      transition: transform 500ms ease-in-out; 
+    }
+    .anim_check{
+      transform: rotate(0deg);
+      /* transition rotation de l'icone */
+      transition: transform 450ms linear;
+      i{
+        color: white;
+        font-size: 20px;
+      }
+    }
+  }
+  
+  .Btn{
+    /* ajout de propriétés au bouton de la page accueil */
+    margin-top: 34px;
+    padding: 20px 50px;
+  }
+ 
+  .anim_apparition{
+     /* animation apparition des articles */
+    opacity: 0;
+    animation: apparition_menu 250ms ease-out forwards;
+  }
+  .anim_delay_1{
+    animation-delay: 125ms;
+  }
+  .anim_delay_2{
+    animation-delay: 250ms;
+  }
+  .anim_delay_3{
+    animation-delay: 375ms;
+  }
+  .anim_delay_spe{
+    animation-delay: 500ms;
+  }
+  .anim_delay_4{
+    animation-delay: 625ms;
+  }
+  .anim_delay_5{
+    animation-delay: 750ms;
+  }
+  .anim_delay_6{
+    animation-delay: 875ms;
+  }
+  .anim_delay_7{
+    animation-delay: 1125ms;
+  }
+  .anim_delay_8{
+    animation-delay: 1250ms;
+  }
+  .anim_delay_9{
+    animation-delay: 1375ms;
+  }
+  
+}
+
