@@ -144,13 +144,15 @@ header{
       margin: 0px 5% 20px 5%;
       @extend %shadow;
       transition: all 250ms ease-in-out;
-      /* hover liste fonctionnement shadow + couleur */
+     
       &:hover {
+         /* hover liste fonctionnement shadow + couleur */
         background-color: $coul_hover_1;
         @extend %hover__shadow;
       }
-      /* changement couleur icon */
+      
       &:hover .menu__icon{
+        /* changement couleur icon */
         color: $coul_prim;
       }
     }
@@ -256,7 +258,7 @@ aside{
   .heart__hover{    
     background: linear-gradient(10deg, #FF8DE0,#A36FE1 70%);    
     -webkit-background-clip: text;
-    background-clip: text;
+    /* background-clip: text; */
     -webkit-text-fill-color: transparent;
     opacity: 0;
     transition: opacity 500ms ease-in-out;    
@@ -308,7 +310,6 @@ footer{
     background-color: white;
     margin-top: 0px;
     
-    /* fleche non visible dans page accueil */
     .header__arrow_icon{
       color: $coul_txt;
       position: absolute;
@@ -320,7 +321,6 @@ footer{
         color: $coul_txt;
       }
     }
-    /* logo */
     .header__logo{
       padding: 23px 0px 8px 0px;
       img{
@@ -330,8 +330,8 @@ footer{
   }
   main{
     position: relative;
-    /* photo du restaurant */
     figure{
+      /* photo du restaurant */
       height: 265px;
       position: absolute;
       z-index: -1;
@@ -472,13 +472,15 @@ footer{
       }
     }
   }
-  /* ajout de propriétés au bouton de la page accueil */
+  
   .Btn{
+    /* ajout de propriétés au bouton de la page accueil */
     margin-top: 34px;
     padding: 20px 50px;
   }
-  /* animation apparition des articles */
+ 
   .anim_apparition{
+     /* animation apparition des articles */
     opacity: 0;
     animation: apparition_menu 250ms ease-out forwards;
   }
