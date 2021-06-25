@@ -60,6 +60,12 @@
     .menu__section{
       article{
         max-width: none;
+        &:hover .menu__textes{
+          width: 400px;
+        }
+        .menu__textes{
+          width: 400px;
+        }
       }
     }
   }
