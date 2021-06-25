@@ -43,6 +43,12 @@
   #page_menu .menu__section article {
     max-width: none;
   }
+  #page_menu .menu__section article:hover .menu__textes {
+    width: 400px;
+  }
+  #page_menu .menu__section article .menu__textes {
+    width: 400px;
+  }
   footer .footer__liste h3 {
     margin-left: 30px;
   }
