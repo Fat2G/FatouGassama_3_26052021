@@ -150,13 +150,11 @@
     }
     main{
       figure{        
-        top: -260px;
-        img{
-          max-height: 1100px;
-        }
+        top: -600px;
+        width: 100%;
       }
       .menu__container{        
-        border-radius: 35px;  
+        margin-top: 300px;
       }
       .menu{
         margin: 0px 2% 0 2%;
@@ -172,9 +170,6 @@
           }
         }
       }
-    }
-    .menu__container{
-      margin: 5%;
     }
     /* anim apparition menus */
   .anim_delay_1{

@@ -529,7 +529,6 @@ aside {
 footer {
   text-align: start;
   background-color: #353535;
-  bottom: 0;
   color: #FFF;
 }
 
@@ -596,7 +595,6 @@ footer .fa-hands-helping {
 
 #page_menu main figure {
   /* photo du restaurant */
-  height: 265px;
   position: absolute;
   z-index: -1;
   top: -220px;
@@ -604,6 +602,9 @@ footer .fa-hands-helping {
 
 #page_menu main figure img {
   width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #page_menu .menu__container {

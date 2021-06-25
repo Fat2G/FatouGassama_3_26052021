@@ -138,13 +138,11 @@
             column-gap: 30px;
   }
   #page_menu main figure {
-    top: -260px;
-  }
-  #page_menu main figure img {
-    max-height: 1100px;
+    top: -600px;
+    width: 100%;
   }
   #page_menu main .menu__container {
-    border-radius: 35px;
+    margin-top: 300px;
   }
   #page_menu main .menu {
     margin: 0px 2% 0 2%;
@@ -159,9 +157,6 @@
   }
   #page_menu main .menu__section article:hover .menu__textes {
     width: 190px;
-  }
-  #page_menu .menu__container {
-    margin: 5%;
   }
   #page_menu .anim_delay_1 {
     -webkit-animation-delay: 125ms;
