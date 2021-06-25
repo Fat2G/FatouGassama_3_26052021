@@ -70,8 +70,8 @@
         margin-left: 30px;
       }
       ul{
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         row-gap: 5px;
         margin-left: 30px;
         & li:nth-child(3),
@@ -139,7 +139,7 @@
     margin: auto;
     .menu__section_grid{
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr 1fr;
       column-gap: 30px;  
     }
     main{
@@ -206,7 +206,7 @@
   footer{
     .footer__liste{
       ul{
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: 1fr 1fr 1fr 1fr;
       }
     }  
   }
